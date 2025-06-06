@@ -1,5 +1,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
+<<<<<<< HEAD
     <solid android:color="@color/chip_stroke"/>
+=======
+    <solid android:color="#FBBEE8"/>
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
     <corners android:radius="16dp"/>
 </shape>

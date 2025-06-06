@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         historyContainer = findViewById(R.id.historyContainer);
 
         Button btnRecycleBin = findViewById(R.id.btnRecycleBin);
+<<<<<<< HEAD
         btnRecycleBin.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, RecycleBinActivity.class));
         });
@@ -62,6 +63,21 @@ public class MainActivity extends AppCompatActivity {
         Button btnAdd = findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, NoteEditActivity.class));
+=======
+        btnRecycleBin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecycleBinActivity.class));
+            }
+        });
+
+        Button btnAdd = findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NoteEditActivity.class));
+            }
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
         });
 
         // 搜索监听
@@ -82,7 +98,10 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
         showSearchHistory();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
         spFilterCategory = findViewById(R.id.spFilterCategory);
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -103,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         loadNotes();
+<<<<<<< HEAD
 
         // 日夜模式切换（单按钮）
         Button btnNightMode = findViewById(R.id.btnNightMode);
@@ -113,6 +133,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             }
+=======
+//夜间模式
+        findViewById(R.id.btnNight).setOnClickListener(v -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        });
+
+        findViewById(R.id.btnDay).setOnClickListener(v -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
         });
     }
 
@@ -142,7 +171,11 @@ public class MainActivity extends AppCompatActivity {
         new Thread(() -> {
             List<NoteWithTags> searchList = NoteDatabase.getInstance(this).noteDao().getNotesWithTags();
             // 过滤内容包含关键字的笔记
+<<<<<<< HEAD
             List<NoteWithTags> filtered = new ArrayList<>();
+=======
+            List<NoteWithTags> filtered = new java.util.ArrayList<>();
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
             for (NoteWithTags nwt : searchList) {
                 if (nwt.note.content != null && nwt.note.content.contains(keyword)) {
                     filtered.add(nwt);
@@ -160,7 +193,11 @@ public class MainActivity extends AppCompatActivity {
     private void loadNotesByCategory(String category) {
         new Thread(() -> {
             List<NoteWithTags> allList = NoteDatabase.getInstance(this).noteDao().getNotesWithTags();
+<<<<<<< HEAD
             List<NoteWithTags> filtered = new ArrayList<>();
+=======
+            List<NoteWithTags> filtered = new java.util.ArrayList<>();
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
             for (NoteWithTags nwt : allList) {
                 if (category.equals(nwt.note.category)) {
                     filtered.add(nwt);
@@ -201,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
         for (String keyword : history) {
             TextView tv = new TextView(this);
             tv.setText(keyword);
+<<<<<<< HEAD
             tv.setPadding(32, 12, 32, 12);
             tv.setBackgroundResource(R.drawable.bg_tag); // 圆角Chip
             tv.setTextColor(getResources().getColor(android.R.color.white));
@@ -210,8 +248,17 @@ public class MainActivity extends AppCompatActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             lp.setMargins(0, 0, 18, 0);
             tv.setLayoutParams(lp);
+=======
+            tv.setPadding(24, 8, 24, 8);
+            tv.setBackgroundResource(R.drawable.bg_tag); // 可选圆角背景
+            tv.setTextColor(getResources().getColor(android.R.color.white));
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
             tv.setOnClickListener(v -> etSearch.setText(keyword));
             historyContainer.addView(tv);
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
 }

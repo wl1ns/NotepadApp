@@ -1,10 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg"
     android:padding="20dp">
+=======
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
 
     <!-- 顶部标题栏 -->
     <TextView
@@ -12,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Notepad"
+<<<<<<< HEAD
         android:textSize="30sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -62,11 +68,53 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"/>
     </HorizontalScrollView>
+=======
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#4D68C8"
+        android:background="#FBBEE8"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="4dp"/>
+
+
+
+    <!-- 搜索框 -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="搜索内容"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/historyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 新增笔记按钮 -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="新增笔记"
+        android:textColor="#4D68C8"
+        android:textSize="18sp"
+        android:background="@drawable/bg_main_button"
+        android:layout_marginBottom="16dp"/>
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
 
     <!-- 分类下拉 -->
     <Spinner
         android:id="@+id/spFilterCategory"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="44dp"
         android:background="@drawable/bg_chip"
         android:layout_marginBottom="14dp"
@@ -108,10 +156,18 @@
     </LinearLayout>
 
     <!-- 笔记列表 -->
+=======
+        android:layout_height="48dp"
+        android:background="@drawable/bg_spinner"
+        android:layout_marginBottom="8dp"/>
+
+
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:padding="10dp"
@@ -129,4 +185,45 @@
         android:textColor="@color/btn_text"
         android:layout_gravity="center_horizontal"
         android:elevation="2dp"/>
+=======
+        android:layout_weight="1"/>
+
+    <!-- 回收站按钮 -->
+    <Button
+        android:id="@+id/btnRecycleBin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="回收站"
+        android:textColor="#4D68C8"
+        android:textSize="18sp"
+        android:background="@drawable/bg_main_button"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 夜间/日间模式切换 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnNight"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="夜间模式"
+            android:background="@drawable/bg_mode_button"
+            android:textColor="#4D68C8"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnDay"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="日间模式"
+            android:background="@drawable/bg_mode_button"
+            android:textColor="#4D68C8"/>
+    </LinearLayout>
+>>>>>>> 38f7a14721e5062b17123fe7e3448ca0cf9b4ee3
 </LinearLayout>
