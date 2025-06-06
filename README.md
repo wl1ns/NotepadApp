@@ -12,7 +12,7 @@
 - 💡 界面美观，支持渐变背景和圆角卡片
 
 ## 项目结构
-
+```
 app/
 ├── src/
 │   └── main/
@@ -27,7 +27,7 @@ app/
 │       │   ├── values-night/              # 夜间模式下的资源（如颜色）
 │       └── AndroidManifest.xml            # 应用清单文件
 └── ...
-
+```
 
 
 - **java/com/example/lastapp/**：存放所有 Java 源代码，包括主界面、适配器、数据库操作等。
